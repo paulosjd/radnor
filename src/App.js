@@ -10,7 +10,12 @@ class App extends Component {
             <AppProvider>
                 <div className="App">
                     <NavBar />
-                    <MainContainer />
+                    <div className="col-md-2">
+                        <h4>Foo</h4>
+                    </div>
+                    <div className="col-md-10">
+                        <MainContainer />
+                    </div>
                 </div>
             </AppProvider>
         )

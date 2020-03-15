@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import { Row, Col, Spinner } from 'reactstrap';
-
 
 class MainContainer extends Component {
 
