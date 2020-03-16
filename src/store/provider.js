@@ -22,6 +22,7 @@ class AppProvider extends Component {
             <AppContext.Provider
                 value={{
                     styles: getThemeStyles(this.state.theme),
+                    setTheme: theme => this.setState({theme}),
                     decrementPrice: selectedID => {
                         const cars = Object.assign({}, this.state.cars);
                         cars[selectedID].price = cars[selectedID].price - 1;

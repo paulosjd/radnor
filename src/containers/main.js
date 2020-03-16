@@ -4,7 +4,9 @@ class MainContainer extends Component {
 
     render() {
         return (
-            <h4>Hi there</h4>
+            <div className='main'>
+                <h4>my page</h4>
+            </div>
         );
     }
 }

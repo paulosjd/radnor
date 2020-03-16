@@ -1,3 +1,28 @@
+
+A React app which provides examples of the following features: 
+PropTypes, defaultProps, Context API, HOCs, component composition and the children prop.
+`prop-types` is the 
+
+A component which wraps the main `<App/>` component in `<AppContext.Provider`>
+to inject context is defined within `./src/store/provider.js`. It contains
+a number of methods which manipulate its state, behaving similar to Redux
+reducer functions. The `useContext` hook is used in various places. 
+This hook is equivalent to `static contextType = MyContext` in a class, or to `<MyContext.Consumer>`
+
+
+
+General notes
+--------------
+
+**Context API**
+
+Context is primarily used when some data needs to be accessible by *many* components at different nesting levels. Apply it sparingly because it makes component reuse more difficult.
+If you only want to avoid passing some props through many levels, component composition is often a simpler solution than context.
+The current context value is determined by the value prop of the nearest `<MyContext.Provider>` above the calling component in the tree.
+This project involves 
+
+-------------------------------------
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

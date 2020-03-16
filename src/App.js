@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import MainContainer from './components/main';
-import NavBar from './components/navbar';
+import MainContainer from './containers/main';
+import NavBar from './containers/navbar';
+import SideMenu from './containers/side_menu';
 import AppProvider from './store/provider';
 
 class App extends Component {
+    state = {
+        selectedMenu: '',
+    };
+
+    handleMenuBtnClick = (selectedMenu) => {
+        this.setState({...this.state, selectedMenu})
+    };
 
     render() {
+        console.log(this.state)
         return (
             <AppProvider>
                 <div className="App">
                     <NavBar />
-                    <div className="col-md-2">
-                        <h4>Foo</h4>
-                    </div>
-                    <div className="col-md-10">
-                        <MainContainer />
-                    </div>
+                    <SideMenu handleClick={this.handleMenuBtnClick.bind(this)} />
+                    <MainContainer selectedMenu={this.state.selectedMenu} />
                 </div>
             </AppProvider>
         )
