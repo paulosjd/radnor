@@ -27,19 +27,28 @@ body {
     display: inline-block;
 }
 
-.signout {
-  float: right
-}
-
 .menu_btn {
   min-width: 160px;
-  margin-top: 12px;
-  margin-bottom: 12px;
-  padding: 0.6rem 0.6rem 0.8rem 0.8rem;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 0.6rem 0.8rem 0.8rem 1.0rem;
   border-radius: 3px;
   text-align: left;
 }
 
-.username {
-  margin-left: 10px
+.selected {
+  background-color: #8a8a8a;
+  color: white;
+}
+
+.user_display {
+  display: inline-flex;
+  margin-top: 6px;
+  margin-left: 18px
+}
+
+.right_nav_btn {
+  float: right;
+  margin-top: 6px;
+  margin-right: 12px;
 }

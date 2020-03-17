@@ -14,7 +14,8 @@ function getThemeStyles(color) {
 
 class AppProvider extends Component {
     state = {
-        theme: 'dark'
+        theme: 'dark',
+        username: 'Paul'
     };
 
     render() {
@@ -22,6 +23,7 @@ class AppProvider extends Component {
             <AppContext.Provider
                 value={{
                     styles: getThemeStyles(this.state.theme),
+                    username: this.state.username,
                     setTheme: theme => this.setState({theme}),
                     decrementPrice: selectedID => {
                         const cars = Object.assign({}, this.state.cars);

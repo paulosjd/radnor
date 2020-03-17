@@ -1,10 +1,15 @@
 import React from "react";
 
-const MenuButton = ({label, handleClick}) => {
+const MenuButton = ({label, handleClick, isActive}) => {
+
+    let clsName = 'menu_btn';
+    if (isActive) {
+        clsName += ' selected'
+    }
 
     return (
         <button
-            className='menu_btn'
+            className={clsName}
             onClick={handleClick}
         >
             {label}

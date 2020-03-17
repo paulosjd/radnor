@@ -1,13 +1,13 @@
 
 A React app which provides examples of the following features: 
 PropTypes, defaultProps, Context API, HOCs, component composition and the children prop.
-`prop-types` is the 
+No third-party packages are used besides React and `prop-types`.
 
-A component which wraps the main `<App/>` component in `<AppContext.Provider`>
+A component which wraps the main `<App/>` component in `<AppProvider`>
 to inject context is defined within `./src/store/provider.js`. It contains
-a number of methods which manipulate its state, behaving similar to Redux
-reducer functions. The `useContext` hook is used in various places. 
-This hook is equivalent to `static contextType = MyContext` in a class, or to `<MyContext.Consumer>`
+a number of methods for setting state and which behave similar to Redux
+reducer functions. The `useContext` hook is used in various places, equivalent
+to `static contextType = AppContext` in a class, or to `<AppContext.Consumer>`
 
 
 

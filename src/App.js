@@ -6,21 +6,23 @@ import AppProvider from './store/provider';
 
 class App extends Component {
     state = {
-        selectedMenu: '',
+        selectedItem: '',
     };
 
-    handleMenuBtnClick = (selectedMenu) => {
-        this.setState({...this.state, selectedMenu})
+    handleMenuBtnClick = (selectedItem) => {
+        this.setState({...this.state, selectedItem})
     };
 
     render() {
-        console.log(this.state)
         return (
             <AppProvider>
                 <div className="App">
                     <NavBar />
-                    <SideMenu handleClick={this.handleMenuBtnClick.bind(this)} />
-                    <MainContainer selectedMenu={this.state.selectedMenu} />
+                    <SideMenu
+                        handleClick={this.handleMenuBtnClick.bind(this)}
+                        selectedItem={this.state.selectedItem}
+                    />
+                    <MainContainer selectedItem={this.state.selectedItem} />
                 </div>
             </AppProvider>
         )

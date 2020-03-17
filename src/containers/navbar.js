@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import AppContext from '../store/context';
+import UserDisplay from '../components/user_display'
+import RightNavButton from '../components/right_nav_btn'
 
 class NavBar extends Component {
     static defaultProps = {
@@ -8,11 +10,10 @@ class NavBar extends Component {
     static contextType = AppContext;
 
     render() {
-        console.log(this.props.myprop);
         return (
                 <div className="top_navbar" style={this.context.styles}>
-                    <span className='username'>Hello {this.props.username}</span>
-                    <span className='signout' >Logout</span>
+                    <UserDisplay />
+                    <RightNavButton />
                 </div>
         )
     }
