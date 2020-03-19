@@ -10,7 +10,9 @@ class App extends Component {
     };
 
     handleMenuBtnClick = (selectedItem) => {
-        this.setState({...this.state, selectedItem})
+        this.setState({
+            ...this.state, selectedItem
+        })
     };
 
     render() {

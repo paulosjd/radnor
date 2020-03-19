@@ -5,6 +5,8 @@ function getThemeStyles(color) {
     switch (color) {
         case 'light':
             return {backgroundColor: '#f8f9fa'};
+        case 'earth':
+            return {backgroundColor: '#959970', color: 'white'};
         case 'dark':
             return {backgroundColor: '#42424c', color: 'white'};
         default:
@@ -15,7 +17,8 @@ function getThemeStyles(color) {
 class AppProvider extends Component {
     state = {
         theme: 'dark',
-        username: 'Paul'
+        username: 'Paul',
+        avatar: '\u2728',
     };
 
     render() {
@@ -23,16 +26,13 @@ class AppProvider extends Component {
             <AppContext.Provider
                 value={{
                     styles: getThemeStyles(this.state.theme),
+                    theme: this.state.theme,
                     username: this.state.username,
+                    avatar: this.state.avatar,
                     setTheme: theme => this.setState({theme}),
-                    decrementPrice: selectedID => {
-                        const cars = Object.assign({}, this.state.cars);
-                        cars[selectedID].price = cars[selectedID].price - 1;
-                        this.setState({
-                            cars
-                        });
-                    }}}
-
+                    setUsername: username => this.setState({username}),
+                    setAvatar: avatar => this.setState({avatar}),
+                }}
             >
                 {this.props.children}
             </AppContext.Provider>
