@@ -18,7 +18,7 @@ class AppProvider extends Component {
     state = {
         theme: 'dark',
         username: 'Paul',
-        avatar: '\u2728',
+        avatar: '\ud83d\udc1b',
     };
 
     render() {

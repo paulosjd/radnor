@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import UserSettings from '../form/user_settings'
 import Summary from '../components/summary'
+import MouseTracker from '../components/mouse_tracker'
 
 class MainContainer extends Component {
 
@@ -10,6 +11,9 @@ class MainContainer extends Component {
             case 'profile':
                 content = <UserSettings />;
                 break;
+            case 'third':
+                content = <MouseTracker />;
+                break
             default:
                 content = <Summary />;
         }
