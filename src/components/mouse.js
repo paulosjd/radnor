@@ -6,11 +6,7 @@ class Mouse extends React.Component {
         width: '100vw'
     };
 
-    constructor(props) {
-        super(props);
-        this.handleMouseMove = this.handleMouseMove.bind(this);
-        this.state = { x: 0, y: 0 };
-    }
+    state = { x: 0, y: 0 };
 
     handleMouseMove(event) {
         this.setState({
@@ -28,7 +24,7 @@ class Mouse extends React.Component {
     render() {
         return (
             <div
-                onMouseMove={this.handleMouseMove}
+                onMouseMove={this.handleMouseMove.bind(this)}
                 style={{
                     height: this.getStyleDim(this.props.height),
                     width: this.getStyleDim(this.props.width)

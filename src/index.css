@@ -8,6 +8,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.inline {
+  display: inline-block;
+}
+
+.mouse_track_code {
+  width: 40%;
+  float: right
+}
+
 .top_navbar {
   margin-bottom: 0;
   min-height: 30px;
