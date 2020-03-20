@@ -15,9 +15,9 @@ class Mouse extends React.Component {
         });
     }
 
-    getStyleDim = dim => {
+    getStyleDim = (dim, sfx) => {
         if (!isNaN(dim)) {
-            return dim + 'vw'
+            return dim + sfx
         } return dim
     };
 
@@ -26,8 +26,8 @@ class Mouse extends React.Component {
             <div
                 onMouseMove={this.handleMouseMove.bind(this)}
                 style={{
-                    height: this.getStyleDim(this.props.height),
-                    width: this.getStyleDim(this.props.width)
+                    height: this.getStyleDim(this.props.height, 'vh'),
+                    width: this.getStyleDim(this.props.width, 'vw')
                 }}
             >
                 {this.props.render(this.state)}

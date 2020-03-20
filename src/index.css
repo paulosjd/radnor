@@ -8,13 +8,25 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+p, h4 {
+  font-size: 0.9rem;
+}
+
+pre {
+  color: #121d0c;
+}
+
 .inline {
   display: inline-block;
 }
 
 .mouse_track_code {
-  width: 40%;
-  float: right
+  width: 42%;
+  float: right;
+  padding-top: 2px;
+  padding-left: 14px;
+  border-left: solid 1px #cdcdcd;
+  border-bottom: solid 1px #cdcdcd;
 }
 
 .top_navbar {
