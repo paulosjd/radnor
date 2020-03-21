@@ -9,8 +9,8 @@ class MouseTracker extends Component {
                     <p>This example of using a render prop, a technique for sharing code between components
                         using a prop whose value is a function.</p>
                     <p>Instead of <code>&lt;Dog&gt;</code> being hard-coded inside of the <code>&lt;Mouse&gt; </code>
-                        component, <code> &lt;Mouse&gt; </code> is provided
-                        with a function prop to dynamically determine what to render.</p>
+                        component, <code> &lt;Mouse&gt; </code> is passed
+                        a function prop to dynamically determine what to render.</p>
                     <h4>Move the mouse around in the area below!</h4>
                 </div>
                 <div className='inline mouse_track_code' >
