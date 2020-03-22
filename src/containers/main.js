@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
 import UserSettings from '../form/user_settings'
+import Footer from '../components/footer'
 import Summary from '../components/summary'
 import MouseTracker from '../components/mouse_tracker'
+import AppContext from "../store/context";
 
 class MainContainer extends Component {
+
+    static contextType = AppContext;
 
     render() {
         let content;
@@ -11,20 +15,18 @@ class MainContainer extends Component {
             case 'profile':
                 content = <UserSettings />;
                 break;
-            case 'third':
+            case 'render_props':
                 content = <MouseTracker />;
-                break
+                break;
             default:
                 content = <Summary />;
         }
 
-
         return (
             <div className='main'>
                 {content}
-                <footer>Powered by <a href='https://github.com/paulosjd'>Paulos Code&#8482;</a></footer>
+                <Footer theme={this.context.theme} />
             </div>
-
         );
     }
 }

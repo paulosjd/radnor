@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, {Component} from 'react';
 import AppContext from '../store/context';
 
 class UserSettings extends Component {
@@ -20,7 +20,7 @@ class UserSettings extends Component {
 
     render() {
         return (
-            <div>
+            <div className='user_settings'>
                 <div className='form-label'>
                     <label>Username</label>
                 </div>

@@ -5,9 +5,9 @@ class SideMenu extends Component {
 
     render() {
         const menuItems = [
-            ['Summary', 'summary'],
+            ['Welcome', 'summary'],
             ['Profile settings', 'profile'],
-            ['Test third', 'third']
+            ['Render props demo', 'render_props']
         ];
 
         return (

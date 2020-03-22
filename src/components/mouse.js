@@ -36,11 +36,14 @@ class Mouse extends React.Component {
     }
 }
 
+export default Mouse
+
 export const Dog = ({mouse}) => {
+    if (!mouse.x && !mouse.y) {
+        return null
+    }
     return (
-        <span style={{ position: 'absolute', left: mouse.x, top: mouse.y, cursor: 'default' }}
+        <span style={{ position: 'absolute', left: mouse.x, top: mouse.y, cursor: 'default', }}
               role="img" aria-label='cat'
         >{'\ud83d\udc15'}</span>)
 };
-
-export default Mouse

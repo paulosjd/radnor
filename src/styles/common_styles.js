@@ -1,24 +1,31 @@
+const initial = {borderRadius:'2px', border: 'solid 2px #8a8a8a'};
+
 const styles = {
     default: {
+        ...initial,
         backgroundColor: '#2a3473',
         color: '#eae8e8',
-        border: 'solid 1px #307312'
-    }, disable: {
+        padding: '4px',
+    },
+    disable: {
+        ...initial,
         backgroundColor: '#9c9c9c',
         color: '#c7c6c6',
-        border: 'solid 1px #79989c'
-    }, light: {
-        backgroundColor: '#326c73',
+    },
+    light: {
+        ...initial,
+        backgroundColor: '#90abec',
+        color: '#FFF',
+    },
+    dark: {
+        ...initial,
+        backgroundColor: '#6573ac',
         color: '#eae8e8',
-        border: 'solid 1px #134d73'
-    }, dark: {
-        backgroundColor: '#480b73',
+    },
+    earth: {
+        ...initial,
+        backgroundColor: '#586373',
         color: '#eae8e8',
-        border: 'solid 1px #087330'
-    }, earth: {
-        backgroundColor: '#257301',
-        color: '#eae8e8',
-        border: 'solid 1px #0a4f73'
     }
 };
 

@@ -51,7 +51,7 @@ class MouseTracker extends Component {
                     <Mouse
                         render={mouse => (
                             <Dog mouse={mouse} />)}
-                        width={40}
+                        width={38}
                         height={56}
                     />
                 </div>
