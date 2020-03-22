@@ -18,7 +18,6 @@ const Summary = (props) => {
         <div className='summary-text'>
             <h4 className='top26'>
                 This is a React app that demonstrates basic examples of various React features.
-                No additional libraries are used other than <code>prop-types</code>.
             </h4>
             <h4 className='top26'>
                 The higher-order component pattern was used to create the elements below.
@@ -46,7 +45,7 @@ const Summary = (props) => {
                 style props.
             </h4>
             <h4 style={{lineHeight: 0, paddingBottom: '12px'}}>
-                The value of the injected style props is set using conditional logic that depends on the 'theme' prop
+                The value of the injected style props is set using logic that checks the 'theme' prop
                 that the component is passed.
             </h4>
             <h4 className='top26'>

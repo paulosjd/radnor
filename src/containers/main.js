@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import UserSettings from './user_settings'
 import Footer from '../components/footer'
 import Summary from './summary'
+import CalculatorDemo from './calculator'
 import MouseTracker from '../components/mouse_tracker'
 import AppContext from "../store/context";
 
@@ -18,7 +19,7 @@ class MainContainer extends Component {
                 content = <MouseTracker />;
                 break;
             case 'prop_types':
-                content = <MouseTracker />;
+                content = <CalculatorDemo />;
                 break;
             default:
                 content = <Summary />;
