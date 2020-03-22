@@ -69,7 +69,7 @@ pre {
   min-width: 13vw;
   margin-left: 16px;
   margin-top: 16px;
-  padding: 0.6rem 0.8rem 0.8rem 1.6rem;
+  padding: 0.6rem 0.8rem 0.8rem 1.2rem;
   border-radius: 3px;
   text-align: left;
 }
@@ -114,9 +114,12 @@ pre {
 }
 
 .summary-text h4 {
-  margin-top:26px;
   font-size: 14px;
   font-weight: normal;
+}
+
+.top26 {
+  margin-top:26px;
 }
 
 a {

@@ -7,7 +7,8 @@ class SideMenu extends Component {
         const menuItems = [
             ['Welcome', 'summary'],
             ['Profile settings', 'profile'],
-            ['Render props demo', 'render_props']
+            ['Render props demo', 'render_props'],
+            ['PropTypes demo', 'prop_types']
         ];
 
         return (

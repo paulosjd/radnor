@@ -1,12 +1,11 @@
-import React, { Component } from 'react';
-import UserSettings from '../form/user_settings'
+import React, {Component} from 'react';
+import UserSettings from './user_settings'
 import Footer from '../components/footer'
-import Summary from '../components/summary'
+import Summary from './summary'
 import MouseTracker from '../components/mouse_tracker'
 import AppContext from "../store/context";
 
 class MainContainer extends Component {
-
     static contextType = AppContext;
 
     render() {
@@ -16,6 +15,9 @@ class MainContainer extends Component {
                 content = <UserSettings />;
                 break;
             case 'render_props':
+                content = <MouseTracker />;
+                break;
+            case 'prop_types':
                 content = <MouseTracker />;
                 break;
             default:
