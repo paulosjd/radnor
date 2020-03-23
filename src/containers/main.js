@@ -3,7 +3,7 @@ import UserSettings from './user_settings'
 import Footer from '../components/footer'
 import Summary from './summary'
 import CalculatorDemo from './calculator'
-import MouseTracker from '../components/mouse_tracker'
+import MouseTracker from './mouse_tracker'
 import AppContext from "../store/context";
 
 class MainContainer extends Component {

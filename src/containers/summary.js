@@ -20,7 +20,7 @@ const Summary = (props) => {
                 This is a React app that demonstrates basic examples of various React features.
             </h4>
             <h4 className='top26'>
-                The higher-order component pattern was used to create the elements below.
+                The first example is the higher-order component pattern used to create the elements below.
             </h4>
             <h4 style={{lineHeight: 0}}>
                 This techniques involves wrapping components in a function to reuse logic
@@ -47,14 +47,6 @@ const Summary = (props) => {
             <h4 style={{lineHeight: 0, paddingBottom: '12px'}}>
                 The value of the injected style props is set using logic that checks the 'theme' prop
                 that the component is passed.
-            </h4>
-            <h4 className='top26'>
-                PropTypes  -- where e.g. uses integer (otherwise displays NaN) -- see example in notes
-            </h4>
-            <h4 className='top26'>
-                Component composition  - pass down component (reuse but not use context -- not avatar/theme etc.) -
-                state only required by
-                a certain reused component (think of new one to make - not avatar).
             </h4>
         </div>
     )

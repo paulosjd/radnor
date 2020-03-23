@@ -155,3 +155,19 @@ footer {
   font-size: large;
   margin-left: 14px;
 }
+
+.row_label {
+  width: 108px;
+}
+
+.calc_table th {
+  min-width: 48px;
+  font-weight: normal;
+}
+
+.fancy-border-beige {
+  width: auto;
+  border: 1px solid #ffebb9;
+  border-radius: 2px;
+  padding: 5px;
+}

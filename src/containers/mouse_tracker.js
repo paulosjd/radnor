@@ -1,5 +1,5 @@
 import React, {Component, Fragment} from "react";
-import Mouse, {Dog} from './mouse'
+import Mouse, {Dog} from '../components/mouse'
 
 class MouseTracker extends Component {
     render() {
