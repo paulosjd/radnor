@@ -14,12 +14,12 @@ const styles = {
     },
     light: {
         ...initial,
-        backgroundColor: '#90abec',
+        backgroundColor: '#a0c56b',
         color: '#FFF',
     },
     dark: {
         ...initial,
-        backgroundColor: '#6573ac',
+        backgroundColor: '#6b646e',
         color: '#eae8e8',
     },
     earth: {

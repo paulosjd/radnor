@@ -5,14 +5,15 @@ class SideMenu extends Component {
 
     render() {
         const menuItems = [
-            ['Welcome', 'summary'],
-            ['Profile settings', 'profile'],
-            ['Render props demo', 'render_props'],
-            ['PropTypes demo', 'prop_types']
+            ['HOCs', 'summary'],
+            ['Context API', 'profile'],
+            ['Render props', 'render_props'],
+            ['PropTypes', 'prop_types']
         ];
 
         return (
             <div className='side_menu'>
+                <h4>React feature demos</h4>
                 {menuItems.map(item => {
                     return (
                         <MenuButton

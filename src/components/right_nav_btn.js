@@ -4,7 +4,7 @@ const RightNavButton = (props) => {
 
     return (
         <div className='right_nav_btn'>
-            <span >Logout</span>
+            <span ><a href='https://github.com/paulosjd/radnor'>Source code</a></span>
         </div>
     )
 };

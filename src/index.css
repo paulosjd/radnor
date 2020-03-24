@@ -48,7 +48,7 @@ pre {
 }
 
 .form-label {
-  margin-top: 18px!important;
+  margin-top: 14px!important;
   font-weight: bold;
 }
 
@@ -58,17 +58,16 @@ pre {
   padding-top: 10px;
  }
 
-.main {
-    width: 82%;
-    float: right;
-    display: inline-block;
+.side_menu h4 {
+  margin-left: 16px;
+  /*padding-top: 10px;*/
 }
 
 .menu_btn {
   cursor: pointer;
   min-width: 13vw;
   margin-left: 16px;
-  margin-top: 16px;
+  margin-bottom: 16px;
   padding: 0.6rem 0.8rem 0.8rem 1.2rem;
   border-radius: 3px;
   text-align: left;
@@ -77,6 +76,12 @@ pre {
 .selected {
   background-color: #8a8a8a;
   color: white;
+}
+
+.main {
+    width: 82%;
+    float: right;
+    display: inline-block;
 }
 
 .user_display {
@@ -113,6 +118,11 @@ pre {
   margin-right: 12px;
 }
 
+.right_nav_btn a {
+  color: #c6b690;
+  font-size: small;
+}
+
 .summary-text h4 {
   font-size: 14px;
   font-weight: normal;
@@ -120,6 +130,11 @@ pre {
 
 .top26 {
   margin-top:26px;
+  font-weight: normal;
+}
+
+.user_settings h4 {
+  font-weight: normal;
 }
 
 a {
@@ -144,6 +159,10 @@ footer {
 
 .hoc_examples {
   display: inline;
+}
+
+.hoc_examples span {
+  font-size: small !important;
 }
 
 .user_settings {

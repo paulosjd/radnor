@@ -2,6 +2,7 @@ import React, {useContext, useState} from "react";
 import AppContext from '../store/context'
 import ButtonOne from '../components/button_one'
 import TextBlock from '../components/text_block'
+import commonStyles from "../styles/common_styles";
 
 const Summary = (props) => {
     const [showEmoji, setShowEmoji] = useState(false);
@@ -20,16 +21,15 @@ const Summary = (props) => {
                 This is a React app that demonstrates basic examples of various React features.
             </h4>
             <h4 className='top26'>
-                The first example is the higher-order component pattern used to create the elements below.
+                The following shows the higher-order component pattern, a technique for reusing code.
             </h4>
             <h4 style={{lineHeight: 0}}>
-                This techniques involves wrapping components in a function to reuse logic
-                that gives them common functionality.
+                The HOC pattern is an abstraction that allows us to define logic in a single place and share it across many components.
             </h4>
             <div className='hoc_examples'>
                 <TextBlock
                     theme={context.theme}
-                    text={'Text block'}
+                    text={'A component that displays text'}
                     extraStyles={{marginRight: '20px', ...padding}}
                 />
                 <ButtonOne
@@ -46,8 +46,20 @@ const Summary = (props) => {
             </h4>
             <h4 style={{lineHeight: 0, paddingBottom: '12px'}}>
                 The value of the injected style props is set using logic that checks the 'theme' prop
-                that the component is passed.
+                that the component is passed:
             </h4>
+            <pre>
+                const stylesWrapper = (WrappedComponent) => {'{\n'}
+                {'    '}return function wrappedRender(args) {'{\n'}
+                {'        '}return WrappedComponent(translateProps(args));{'\n'}
+                {'    '}{'}\n'}
+                {'}\n\n'}
+                const translateProps = (props) => {'{\n'}
+                {'    return {...props, ..{...commonStyles.default, ...commonStyles[props.theme]}}\n'}
+                {'}\n\n'}
+                const Button = (props) => (&lt;button style={'{props.styles}'}&gt;{'{props.text}'}&lt;/button&gt;{')\n\n'}
+                const WrappedButton = stylesWrapper(Button){'\n\n'}
+            </pre>
         </div>
     )
 };

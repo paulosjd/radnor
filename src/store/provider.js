@@ -16,7 +16,7 @@ function getThemeStyles(color) {
 
 class AppProvider extends Component {
     state = {
-        theme: 'dark',
+        theme: 'light',
         username: 'Paul',
         avatar: '\ud83d\udc1b',
     };

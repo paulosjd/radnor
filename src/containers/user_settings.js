@@ -49,7 +49,7 @@ class UserSettings extends Component {
                     <label>Theme</label>
                 </div>
                 <div className="btn-group-justified">
-                    {['dark', 'earth', 'light'].map(x => (
+                    {['light', 'dark', 'earth'].map(x => (
                         <label className="radio-inline" key={x}>
                             <input
                                 type="radio"
@@ -61,8 +61,30 @@ class UserSettings extends Component {
                         </label>
                     ))}
                 </div>
-
-
+                <h4 >
+                    The Context API provides a way to to share data considered as “global”
+                    for the entire app, such as data behind the above user settings.
+                </h4>
+                <h4 style={{lineHeight: 0, paddingBottom: '12px'}}>
+                    It allows data to be passed through the component tree without having to pass props down
+                    manually at every level .
+                </h4>
+                <h4 style={{lineHeight: 0, paddingBottom: '12px'}}>
+                    Every Context object comes with a Provider React component that allows consuming components to
+                    subscribe to context changes:
+                </h4>
+                <pre>
+                    const ThemeContext = React.createContext();{'\n\n'}
+                    class ThemeProvider extends React.Component {'{\n'}
+                    {'    '}state = {'{theme: \'dark\', ...}\n'}
+                    {'    '}render() {'{\n'}
+                    {'        '}return ( {'\n'}
+                    {'            '}&lt;ThemeContext.Provider value={'{{theme: this.state.theme, ...}}\n'}
+                    {'                {this.props.children}\n'}
+                    {'            '}&lt;/ThemeContext.Provider>){'\n'}
+                    {'    '}{'}\n'}
+                    {'}\n'}
+                </pre>
             </div>
         )
     }
