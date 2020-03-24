@@ -41,11 +41,11 @@ const Summary = (props) => {
                 {emoji}
             </div>
             <h4>
-                Above, the components that render the text and button elements are wrapped in a function which injects
+                The components that renders the above text and button elements are wrapped in a function which injects
                 style props.
             </h4>
             <h4 style={{lineHeight: 0, paddingBottom: '12px'}}>
-                The value of the injected style props is set using logic that checks the 'theme' prop
+                The value of these injected props is set using logic that checks the 'theme' prop
                 that the component is passed:
             </h4>
             <pre>
