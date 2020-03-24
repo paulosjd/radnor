@@ -11,6 +11,7 @@ class SalaryCalculator extends React.Component {
         salary: PropTypes.number,
         outgoings: PropTypes.arrayOf(PropTypes.number),
     };
+
     render() {
         return (
             <div>
@@ -47,4 +48,4 @@ class SalaryCalculator extends React.Component {
     }
 }
 
-export default SalaryCalculator;
+export default SalaryCalculator

@@ -9,7 +9,10 @@ const CalculatorDemo = (props) => {
                 Now a separate package, <code>PropTypes</code> enables type checking for avoiding
                 bugs relating to types.
             </h4>
-            <SalaryCalculator salary={60000} outgoings={[1800, 1600, 1200, 1900, 2200, 1400]}/>
+            <SalaryCalculator
+                salary={60000}
+                outgoings={[1800, 1600, 1200, 1900, 2200, 1400]}
+            />
             <h4>
                 The component divides the <code>annualSalary</code> prop it receives and
                 so a number is required to avoid '$NaN' being rendered.
@@ -36,4 +39,4 @@ const CalculatorDemo = (props) => {
     )
 };
 
-export default CalculatorDemo;
+export default CalculatorDemo

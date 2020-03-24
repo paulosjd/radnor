@@ -10,6 +10,6 @@ const FancyBorder = (props) => {
 
 FancyBorder.defaultProps = {
     width: 'auto'
-}
+};
 
-export default FancyBorder;
+export default FancyBorder

@@ -2,7 +2,6 @@ import React, {useContext, useState} from "react";
 import AppContext from '../store/context'
 import ButtonOne from '../components/button_one'
 import TextBlock from '../components/text_block'
-import commonStyles from "../styles/common_styles";
 
 const Summary = (props) => {
     const [showEmoji, setShowEmoji] = useState(false);
@@ -51,11 +50,11 @@ const Summary = (props) => {
             <pre>
                 const stylesWrapper = (WrappedComponent) => {'{\n'}
                 {'    '}return function wrappedRender(args) {'{\n'}
-                {'        '}return WrappedComponent(translateProps(args));{'\n'}
+                {'        '}return WrappedComponent(translateProps(args)){'\n'}
                 {'    '}{'}\n'}
                 {'}\n\n'}
                 const translateProps = (props) => {'{\n'}
-                {'    return {...props, ..{...commonStyles.default, ...commonStyles[props.theme]}}\n'}
+                {'    return {...props, ...{ ...commonStyles.default, ...commonStyles[props.theme]}}\n'}
                 {'}\n\n'}
                 const Button = (props) => (&lt;button style={'{props.styles}'}&gt;{'{props.text}'}&lt;/button&gt;{')\n\n'}
                 const WrappedButton = stylesWrapper(Button){'\n\n'}
@@ -64,4 +63,4 @@ const Summary = (props) => {
     )
 };
 
-export default Summary;
+export default Summary

@@ -15,4 +15,4 @@ BorderedIcon.defaultProps = {
     borderColor: '#878e99'
 };
 
-export default BorderedIcon;
+export default BorderedIcon

@@ -33,8 +33,7 @@ class MouseTracker extends Component {
                         {'    '}state = {'{ x: 0, y: 0 };\n\n'}
                         {'    '}handler(event) {'{\n'}
                         {'        '}this.setState({'{\n'}
-                        {'            '}x: event.clientX,{'\n'}
-                        {'            '}y: event.clientY{'\n'}
+                        {'            '}x: event.clientX, y: event.clientY{'\n'}
                         {'        })\n'}
                         {'    }\n\n'}
                         {'    '}render() {'{\n'}

@@ -5,9 +5,6 @@ import UserDisplay from '../components/user_display'
 import RightNavButton from '../components/right_nav_btn'
 
 class NavBar extends Component {
-    static defaultProps = {
-        myprop: 'Hello'
-    };
     static contextType = AppContext;
 
     render() {
@@ -21,4 +18,4 @@ class NavBar extends Component {
     }
 }
 
-export default NavBar;
+export default NavBar

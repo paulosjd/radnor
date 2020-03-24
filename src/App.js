@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import MainContainer from './containers/main';
 import NavBar from './containers/navbar';
 import SideMenu from './containers/side_menu';
@@ -31,4 +31,4 @@ class App extends Component {
     }
 }
 
-export default App;
+export default App

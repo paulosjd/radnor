@@ -17,4 +17,4 @@ const MenuButton = ({label, handleClick, isActive}) => {
     )
 };
 
-export default MenuButton;
+export default MenuButton

@@ -74,7 +74,7 @@ class UserSettings extends Component {
                     subscribe to context changes:
                 </h4>
                 <pre>
-                    const ThemeContext = React.createContext();{'\n\n'}
+                    const ThemeContext = React.createContext(){'\n\n'}
                     class ThemeProvider extends React.Component {'{\n'}
                     {'    '}state = {'{theme: \'dark\', ...}\n'}
                     {'    '}render() {'{\n'}
@@ -90,5 +90,4 @@ class UserSettings extends Component {
     }
 }
 
-export default UserSettings;
-
+export default UserSettings

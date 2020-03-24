@@ -7,4 +7,4 @@ const TextBlock = (props) => {
     )
 };
 
-export default stylesWrapper(TextBlock);
+export default stylesWrapper(TextBlock)

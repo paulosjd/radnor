@@ -46,4 +46,4 @@ export const Dog = ({mouse}) => {
         <span style={{ position: 'absolute', left: mouse.x, top: mouse.y, cursor: 'default', }}
               role="img" aria-label='cat'
         >{'\ud83d\udc15'}</span>)
-};
+}

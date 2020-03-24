@@ -11,8 +11,4 @@ const UserDisplay = (props) => {
     )
 };
 
-UserDisplay.defaultProps = {
-    myprop: 'Hello'
-};
-
-export default UserDisplay;
+export default UserDisplay

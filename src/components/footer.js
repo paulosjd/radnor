@@ -11,4 +11,4 @@ const Footer = (props) => {
     )
 };
 
-export default stylesWrapper(Footer);
+export default stylesWrapper(Footer)
