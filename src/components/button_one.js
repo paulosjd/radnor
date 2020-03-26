@@ -6,6 +6,7 @@ const ButtonOne = (props) => {
         <button
             style={props.styles}
             onClick={props.clickHandler}
+            type={props.type || 'button'}
         >{props.text}
         </button>
     )

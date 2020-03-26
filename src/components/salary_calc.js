@@ -22,10 +22,8 @@ class SalaryCalculator extends React.Component {
                         <thead>
                             <tr>
                                 {['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-                                ].map((str, ind) => {
-                                    if (ind -1 < this.props.outgoings.length) {
-                                        return <th key={ind} >{str}</th>
-                                }})}
+                                ].filter((s, ind) => ind -1 < this.props.outgoings.length).map(
+                                    (str, ind) => (<th key={ind}>{str}</th>))}
                             </tr>
                         </thead>
                         <tbody>

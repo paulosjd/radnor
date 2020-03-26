@@ -16,14 +16,9 @@ const Summary = (props) => {
 
     return (
         <div className='summary-text'>
-            <h4 className='top26'>
-                This is a React app that demonstrates basic examples of various React features.
-            </h4>
-            <h4 className='top26'>
-                The following shows the higher-order component pattern, a technique for reusing code.
-            </h4>
-            <h4 style={{lineHeight: 0}}>
-                The HOC pattern is an abstraction that allows us to define logic in a single place and share it across many components.
+            <h4 className='top26' style={{lineHeight: 0}}>
+                The following higher-order component pattern serves for defining logic
+                in a single place, for reusing across many components.
             </h4>
             <div className='hoc_examples'>
                 <TextBlock

@@ -16,8 +16,60 @@ pre {
   color: #121d0c;
 }
 
+.top26 {
+  margin-top:26px;
+  font-weight: normal;
+}
+
+.left6 {
+  margin-left: 6px !important
+}
+
+a {
+  text-decoration: none;
+}
+
+footer {
+  position:fixed;
+  left: 0;
+  bottom: 4px;
+  right: 0;
+  font-size: 12px;
+}
+
+video {
+  margin-top: 20px
+}
+
 .inline {
   display: inline-block;
+}
+
+.search_form_field {
+  margin-left: 20px;
+}
+
+.search_form_field label{
+  display: inline-block;
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+.search_form_field input{
+  display: inline-block;
+  line-height: 2;
+  padding-left: 6px;
+}
+
+.search_form_field h4{
+  display: inline-block;
+  font-weight: normal;
+  margin-left: 24px;
+  color: #4f4f4f;
+}
+
+.user_settings h4 {
+  font-weight: normal;
 }
 
 .mouse_track_code {
@@ -60,7 +112,8 @@ pre {
 
 .side_menu h4 {
   margin-left: 16px;
-  /*padding-top: 10px;*/
+  color: #8a8a8a;
+  cursor: default;
 }
 
 .menu_btn {
@@ -81,7 +134,10 @@ pre {
 .main {
     width: 82%;
     float: right;
-    display: inline-block;
+}
+
+.foobar {
+  display: initial;
 }
 
 .user_display {
@@ -126,27 +182,6 @@ pre {
 .summary-text h4 {
   font-size: 14px;
   font-weight: normal;
-}
-
-.top26 {
-  margin-top:26px;
-  font-weight: normal;
-}
-
-.user_settings h4 {
-  font-weight: normal;
-}
-
-a {
-  text-decoration: none;
-}
-
-footer {
-  position:fixed;
-  left: 0;
-  bottom: 4px;
-  right: 0;
-  font-size: 12px;
 }
 
 .footer_link {

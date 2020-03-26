@@ -8,12 +8,13 @@ class SideMenu extends Component {
             ['HOCs', 'summary'],
             ['Context API', 'profile'],
             ['Render props', 'render_props'],
-            ['PropTypes', 'prop_types']
+            ['Type checking', 'prop_types'],
+            ['Refs', 'refs']
         ];
 
         return (
             <div className='side_menu'>
-                <h4>React feature demos</h4>
+                <h4>React concepts</h4>
                 {menuItems.map(item => {
                     return (
                         <MenuButton

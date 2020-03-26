@@ -4,6 +4,7 @@ import Footer from '../components/footer'
 import Summary from './summary'
 import CalculatorDemo from './calculator'
 import MouseTracker from './mouse_tracker'
+import SearchForm from './search_form'
 import AppContext from "../store/context";
 
 class MainContainer extends Component {
@@ -20,6 +21,9 @@ class MainContainer extends Component {
                 break;
             case 'prop_types':
                 content = <CalculatorDemo />;
+                break;
+            case 'refs':
+                content = <SearchForm />;
                 break;
             default:
                 content = <Summary />;
