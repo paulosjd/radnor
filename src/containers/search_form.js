@@ -87,7 +87,8 @@ class SearchForm extends Component {
                         <source src={flowerVideo} type="video/webm" />
                     </video>
                     <h4 className='refs-extra'>
-                        Another use case of refs is integrating with third-party libraries that rely on the DOM
+                        Another use case of refs is integrating with third-party libraries that rely on the DOM,
+                        e.g. D3.js or leaftlet.js.
                     </h4>
                     <h4 style={{paddingRight: '34px'}}>
                         Suppose our component which used refs needed to use the React-Redux <code>connect()</code> API.
