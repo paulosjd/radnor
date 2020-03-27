@@ -5,81 +5,96 @@ import flowerVideo from '../media/flower.webm'
 class SearchForm extends Component {
     constructor(props) {
         super(props);
-        this.myRef = React.createRef();
-        this.onSubmit = this.onSubmit.bind(this);
-        this.state = { searchText: '' };
+        this.handleVideoClick.bind(this);
+        this.state = {
+            searchText: '',
+            isPlaying: false
+        };
     }
 
-    handleInputChange = (e) => {
+    handleInputChange(e) {
         this.setState({ searchText: e.target.value.slice(0,4) });
         if (e.target.value.length >= 4) {
             this.input.focus()
         }
     };
 
-    handleRefreshButtonClick = () => {
-        this.input.disabled = false;
-        this.input.focus()
-    };
-
-    onSubmit(event) {
-        const value = this.input.value;
-        this.input.disabled = true;
-        console.log(value);
-        event.preventDefault();
+    handleVideoClick() {
+        if (this.state.isPlaying) {
+            this.video.pause();
+        } else {
+            this.video.play();
+        }
+        this.setState({ isPlaying: !this.state.isPlaying });
     }
 
     render() {
         return (
-            <form className='foobar' onSubmit={this.onSubmit}>
+            <form onSubmit={e => {this.handleVideoClick(); e.preventDefault()}}>
                 <h4 className='top26'>
-                    A general rule of thumb is to avoid using the ref attribute,
-                    but sometimes you have no other choice than to use it.
+                    Use of the ref attribute is necessary in certain cases,
+                    such as accessing the DOM API to use a method like <code>focus()</code>:
                 </h4>
-                <h4 style={{lineHeight: 0, fontWeight: 'normal'}}>
-                    Typical use cases include needing to access the DOM API
-                    or integrating with a third-party libraries that relies on the DOM.
-                </h4>
-                <div className='search_form_field top26'>
+                <div className='search_form_field'>
                     <label>Year of birth</label>
                     <input
                         autoFocus
-                        type="text"
-                        className='left6'
                         placeholder='Start typing here'
                         value={this.state.searchText}
                         onChange={this.handleInputChange.bind(this)}
                     />
-                    <h4>This is a plain input element</h4>
-                </div>
-                <div className='search_form_field'>
                     <label>Favorite food</label>
                     <input
                         ref={node => this.input = node}
-                        type="text"
                     />
-                    <h4>This input element has a ref attribute</h4>
+                    <ButtonOne theme='default' text='Btn' type='submit' />
                 </div>
-                <div className=''>
-                    <button  ref={this.myRef} type="button" onClick={e => console.log(this.myRef.current)}>
-                        myRef logger
-                    </button>
-                    <ButtonOne
-                        theme='default'
-                        text='Search'
-                        type='submit'
-                        // extraStyles={{...padding, cursor: 'pointer'}}
-                        // clickHandler={() => setShowEmoji(!showEmoji)}
-                    />
+                <div className='inline' style={{width: '40vw'}}>
+                    <h4 style={{marginBottom: 0, marginTop: '26px'}}>
+                        The second input element sets a reference to the DOM element to enable
+                        <code> focus()</code> to be imperatively called: <code >{'\nref={node => this.input = node}\n'}</code>
+                    </h4>
+                    <pre className='top26'>
+                        class RefsExample extends Component {'{\n'}
+                        {'    '}state = {'{isPlaying: false}\n\n'}
+                        {'    '}handleVideoClick() {'{\n'}
+                        {'        if (this.state.isPlaying) {\n'}
+                        {'            this.video.pause()\n'}
+                        {'        else {\n'}
+                        {'            this.video.play()\n'}
+                        {'        this.setState({ isPlaying: !this.state.isPlaying })\n    }\n\n'}
+                        {'    '}render() {'{\n'}
+                        {'        '}return ( {'\n'}
+                        {'            '}&lt;div&gt;{'\n'}
+                        {'                '}&lt;{'video \n'}
+                        {'                    ref={video => this.video = video}\n'}
+                        {'                    onClick={this.handleVideoClick.bind(this)}\n'}
+                        {'                '}&gt;{'\n'}
+                        {'                    '}&lt;{'source src={myVideo} type="video/webm" '}/&gt;{'\n'}
+                        {'                '}&lt;/video&gt;){'\n'}
+                        {'            '}&lt;/div&gt;){'\n    }\n}\n'}
+                    </pre>
                 </div>
-                <div>
+                <div className='video-ref'>
+                    <h4>
+                        <code>play()</code> and <code>pause()</code> on a video element:
+                    </h4>
                     <video
                         width={250}
                         ref={video => this.video = video}
-                        onClick={this.handleVideoClick}
+                        onClick={this.handleVideoClick.bind(this)}
                     >
                         <source src={flowerVideo} type="video/webm" />
                     </video>
+                    <h4 className='refs-extra'>
+                        Another use case of refs is integrating with third-party libraries that rely on the DOM
+                    </h4>
+                    <h4 style={{paddingRight: '34px'}}>
+                        Suppose our component which used refs needed to use the React-Redux <code>connect()</code> API.
+                        Since <code>connect()</code> is an HOC, so returns a new component,
+                        the ref that we set on our component would now point to the connected component instance.
+                        This is where <code>forwardRefs</code> are needed.
+                    </h4>
                 </div>
             </form>
         );

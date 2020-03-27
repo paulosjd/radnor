@@ -10,6 +10,7 @@ body {
 
 p, h4 {
   font-size: 0.9rem;
+  font-weight: normal;
 }
 
 pre {
@@ -30,15 +31,11 @@ a {
 }
 
 footer {
-  position:fixed;
+  position: fixed;
   left: 0;
-  bottom: 4px;
+  bottom: 2px;
   right: 0;
   font-size: 12px;
-}
-
-video {
-  margin-top: 20px
 }
 
 .inline {
@@ -46,26 +43,23 @@ video {
 }
 
 .search_form_field {
+  margin-top: 14px;
   margin-left: 20px;
 }
 
 .search_form_field label{
   display: inline-block;
   padding-right: 20px;
-  font-weight: bold;
+  color: #033624;
+  font-size: small;
 }
 
 .search_form_field input{
   display: inline-block;
   line-height: 2;
   padding-left: 6px;
-}
-
-.search_form_field h4{
-  display: inline-block;
-  font-weight: normal;
-  margin-left: 24px;
-  color: #4f4f4f;
+  margin-right: 30px;
+  color: dimgray;
 }
 
 .user_settings h4 {
@@ -85,6 +79,12 @@ video {
   margin-left: 14px;
 }
 
+.video-ref {
+  width: 44%;
+  float: right;
+  padding-top: 2px;
+}
+
 .top_navbar {
   margin-bottom: 0;
   min-height: 30px;
@@ -92,6 +92,11 @@ video {
   display: inline-block;
   width: 100%;
   cursor: default;
+}
+
+.refs-extra {
+  margin-top: 32px;
+  padding-right: 32px;
 }
 
 .radio-inline {
@@ -134,10 +139,6 @@ video {
 .main {
     width: 82%;
     float: right;
-}
-
-.foobar {
-  display: initial;
 }
 
 .user_display {

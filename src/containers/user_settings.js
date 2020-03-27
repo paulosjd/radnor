@@ -79,11 +79,9 @@ class UserSettings extends Component {
                     {'    '}state = {'{theme: \'dark\', ...}\n'}
                     {'    '}render() {'{\n'}
                     {'        '}return ( {'\n'}
-                    {'            '}&lt;ThemeContext.Provider value={'{{theme: this.state.theme, ...}}\n'}
+                    {'            '}&lt;ThemeContext.Provider value={'{{theme: this.state.theme, ...}}'}&gt;{'\n'}
                     {'                {this.props.children}\n'}
-                    {'            '}&lt;/ThemeContext.Provider>){'\n'}
-                    {'    '}{'}\n'}
-                    {'}\n'}
+                    {'            '}&lt;/ThemeContext.Provider&gt;){'\n    }\n}\n'}
                 </pre>
             </div>
         )

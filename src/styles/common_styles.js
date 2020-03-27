@@ -3,7 +3,7 @@ const initial = {borderRadius:'2px', border: 'solid 2px #8a8a8a'};
 const styles = {
     default: {
         ...initial,
-        backgroundColor: '#2a3473',
+        backgroundColor: '#374773',
         color: '#eae8e8',
         padding: '4px',
     },
