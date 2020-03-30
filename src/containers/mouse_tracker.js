@@ -6,7 +6,7 @@ class MouseTracker extends Component {
         return (
             <Fragment>
                 <div className='inline' style={{width: '40vw'}}>
-                    <p>This example of using a render prop, a technique for sharing code between components
+                    <p>The following demonstrates usage of a render prop, a technique for sharing code between components
                         using a prop whose value is a function.</p>
                     <p>Instead of <code>&lt;Dog&gt;</code> being hard-coded inside of the <code>&lt;Mouse&gt; </code>
                         component, <code> &lt;Mouse&gt; </code> is passed

@@ -6,6 +6,7 @@ class SearchForm extends Component {
     constructor(props) {
         super(props);
         this.handleVideoClick.bind(this);
+        this.input = null;
         this.state = {
             searchText: '',
             isPlaying: false
@@ -91,10 +92,9 @@ class SearchForm extends Component {
                         e.g. D3.js or leaftlet.js.
                     </h4>
                     <h4 style={{paddingRight: '34px'}}>
-                        Suppose our component which used refs needed to use the React-Redux <code>connect()</code> API.
-                        Since <code>connect()</code> is an HOC, so returns a new component,
-                        the ref that we set on our component would now point to the connected component instance.
-                        This is where <code>forwardRefs</code> are needed.
+                        If you add a ref to a HOC, the ref will refer to the outermost container component, not the
+                        wrapped component. We can explicitly forward refs to an inner component using
+                        the <code>React.forwardRefs</code> API.
                     </h4>
                 </div>
             </form>

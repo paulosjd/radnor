@@ -4,6 +4,7 @@ import Summary from './summary'
 import CalculatorDemo from './calculator'
 import MouseTracker from './mouse_tracker'
 import SearchForm from './search_form'
+import KeyPressDemo from './key_press_demo'
 
 class MainContainer extends Component {
 
@@ -21,6 +22,9 @@ class MainContainer extends Component {
                 break;
             case 'refs':
                 content = <SearchForm />;
+                break;
+            case 'use_effect':
+                content = <KeyPressDemo />
                 break;
             default:
                 content = <Summary />;

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import MenuButton from '../components/menu_button'
 
 class SideMenu extends Component {
@@ -9,7 +9,8 @@ class SideMenu extends Component {
             ['Context API', 'profile'],
             ['Render props', 'render_props'],
             ['Type checking', 'prop_types'],
-            ['Refs', 'refs']
+            ['Refs', 'refs'],
+            ['Custom hooks', 'use_effect'],
         ];
 
         return (
