@@ -8,6 +8,15 @@ import KeyPressDemo from './key_press_demo'
 
 class MainContainer extends Component {
 
+    state = {
+        keyPressHistory: ''
+    };
+
+    setKeyPressed(val) {
+        const k = this.state.keyPressHistory;
+        this.setState({...this.state, keyPressHistory: k + val})
+    }
+
     render() {
         let content;
         switch (this.props.selectedItem) {
@@ -24,7 +33,12 @@ class MainContainer extends Component {
                 content = <SearchForm />;
                 break;
             case 'use_effect':
-                content = <KeyPressDemo />
+                content = (
+                    <KeyPressDemo
+                        keyPressHistory={this.state.keyPressHistory}
+                        setKeyPressed={this.setKeyPressed.bind(this)}
+                    />
+                );
                 break;
             default:
                 content = <Summary />;
