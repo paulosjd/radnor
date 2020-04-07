@@ -5,6 +5,7 @@ import CalculatorDemo from './calculator'
 import MouseTracker from './mouse_tracker'
 import SearchForm from './search_form'
 import KeyPressDemo from './key_press_demo'
+import MediaStylesDemo from './media_styles_demo'
 
 class MainContainer extends Component {
 
@@ -19,7 +20,8 @@ class MainContainer extends Component {
 
     render() {
         let content;
-        switch (this.props.selectedItem) {
+        // switch (this.props.selectedItem) {
+        switch ('media') {
             case 'profile':
                 content = <UserSettings />;
                 break;
@@ -39,6 +41,9 @@ class MainContainer extends Component {
                         setKeyPressed={this.setKeyPressed.bind(this)}
                     />
                 );
+                break;
+            case 'media':
+                content = <MediaStylesDemo/>;
                 break;
             default:
                 content = <Summary />;

@@ -11,6 +11,7 @@ class SideMenu extends Component {
             ['Type checking', 'prop_types'],
             ['Refs', 'refs'],
             ['Custom hooks', 'use_effect'],
+            ['Media styles', 'media'],
         ];
 
         return (

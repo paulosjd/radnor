@@ -26,6 +26,10 @@ pre {
   margin-left: 6px !important
 }
 
+.left20 {
+  margin-left: 20px !important
+}
+
 a {
   text-decoration: none;
 }
@@ -131,6 +135,11 @@ footer {
   text-align: left;
 }
 
+.pause-btn {
+  cursor: pointer;
+  border-radius: 3px;
+}
+
 .selected {
   background-color: #8a8a8a;
   color: white;
@@ -156,11 +165,23 @@ footer {
 }
 
 .avatar-select {
-  margin-top: 7px;
+   margin-top: 7px;
+   width: 56px;
+   height: 35px;
+   text-align: center;
+   font-size: large;
+ }
+
+.color-select {
+  margin-left: 10px;
   width: 56px;
   height: 35px;
+}
+
+.speed-select {
   text-align: center;
-  font-size: large;
+  margin-left: 10px;
+  height: 35px;
 }
 
 .top_navbar .avatar-span {
@@ -226,3 +247,73 @@ footer {
   border-radius: 2px;
   padding: 5px;
 }
+
+.media-right {
+  display: inline;
+  float: right;
+  width: 60%;
+}
+
+.media-right label, select {
+  vertical-align: 40px;
+}
+
+.med-btn {
+  cursor: pointer;
+  margin-top: 26px;
+  border-radius: 3px;
+  background-color: #dfeaea;
+}
+
+.act-btn {
+  background-color: #506e96;
+  color: white
+}
+
+.spin-jsx {
+  width: 34%;
+  overflow: scroll;
+}
+
+#loading-spinner {
+  animation: loading-spinner 1s linear infinite
+}
+
+@keyframes loading-spinner {
+  from {
+    transform: rotate(0deg)
+  } to {
+    transform: rotate(360deg)
+  }
+}
+
+#loading-bar-left {
+   animation: loading-bar-morph 1s linear .1s infinite;
+   transform-origin: center
+}
+
+#loading-bar-middle {
+   animation: loading-bar-morph 1s linear .2s infinite;
+   transform-origin: center
+}
+
+#loading-bar-right {
+   animation: loading-bar-morph 1s linear .4s infinite;
+   transform-origin: center
+}
+
+@keyframes loading-bar-morph {
+  0% {
+    transform: scaleY(1)
+  }
+  25% {
+    transform: scaleY(0.3)
+  }
+  50% {
+    transform: scaleY(0.7)
+  }
+  75% {
+    transform: scaleY(0.15)
+  }
+}
+

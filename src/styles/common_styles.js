@@ -17,6 +17,12 @@ const styles = {
         backgroundColor: '#a0c56b',
         color: '#FFF',
     },
+    grey: {
+        ...initial,
+        backgroundColor: '#b1b1b1',
+        borderColor: '#b1b1b1',
+        color: '#FFF',
+    },
     dark: {
         ...initial,
         backgroundColor: '#6b646e',
