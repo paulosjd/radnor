@@ -251,10 +251,10 @@ footer {
 .media-right {
   display: inline;
   float: right;
-  width: 60%;
+  width: 64%;
 }
 
-.media-right label, select {
+.media-right label, select, h4 {
   vertical-align: 40px;
 }
 
@@ -271,8 +271,24 @@ footer {
 }
 
 .spin-jsx {
+  display: inline-block;
   width: 34%;
   overflow: scroll;
+}
+
+.media-right-2 {
+  display: inline;
+  float: right;
+  width: 62%;
+}
+
+.rotate-code {
+  display: inline-block;
+  float: right;
+  overflow: scroll;
+  width: 500px;
+  height: 300px;
+  margin-top: 0;
 }
 
 #loading-spinner {
@@ -288,17 +304,17 @@ footer {
 }
 
 #loading-bar-left {
-   animation: loading-bar-morph 1s linear .1s infinite;
+   animation: loading-bar-morph 2s linear .1s infinite;
    transform-origin: center
 }
 
 #loading-bar-middle {
-   animation: loading-bar-morph 1s linear .2s infinite;
+   animation: loading-bar-morph 2s linear .2s infinite;
    transform-origin: center
 }
 
 #loading-bar-right {
-   animation: loading-bar-morph 1s linear .4s infinite;
+   animation: loading-bar-morph 2s linear .4s infinite;
    transform-origin: center
 }
 
@@ -316,4 +332,3 @@ footer {
     transform: scaleY(0.15)
   }
 }
-

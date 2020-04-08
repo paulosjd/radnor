@@ -1,12 +1,10 @@
 import React, {useState} from "react";
 import {LoadingSpinner, LoadingBar, PacmanSpinner} from '../components/spinners'
 import ButtonOne from '../components/button_one'
-
-// const foo = <ReactCSSTransitionGroup/>
+import RotatingSvg from '../components/rotating_svg'
 
 const MediaStylesDemo = (props) => {
 
-    const [inputVal, setInputVal] = useState('');
     const [pauseLoadSpin, setPauseLoadSpin] = useState(false);
     const [showCssCode, setShowCssCode] = useState(false);
     const [selectedColor, setSelectedColor] = useState('#ffe583');
@@ -35,7 +33,7 @@ const MediaStylesDemo = (props) => {
     );
     if (showCssCode) {
         spinCode = (
-            <pre className=''>
+            <pre>
                 #loading-spinner {'{\n'}
                 {'  animation: loading-spinner 1s linear infinite\n}\n\n'}
                 {'@keyframes loading-spinner {\n from {\n'}
@@ -83,33 +81,34 @@ const MediaStylesDemo = (props) => {
                     />
                 </div>
                 <div className='media-right'>
-                        <PacmanSpinner
-                            pause={pauseLoadSpin}
-                            spinColor={selectedColor}
-                        />
-                        <label>Color: </label>
-                        <select
-                            className='color-select'
-                            onChange={e => setSelectedColor(e.target.value)}
-                        >
-                            {['#ffe583', '#cdffb2', '#aec8ff'].map(x => {
-                                return <option key={x} style={{backgroundColor: x}} value={x}> </option>;
-                            })}
-                        </select>
-                        <label className='left20'>Speed: </label>
-                        <select
-                            value={selectedSpeed}
-                            className='speed-select'
-                            onChange={e => setSelectedSpeed(e.target.value.toLowerCase())}
-                        >
-                            {['normal', 'fast', 'slow'].map(x => {
-                                return (
-                                    <option key={x} style={{backgroundColor: x}} value={x}>
-                                        {x[0].toUpperCase() + x.substring(1)}
-                                    </option>
-                                )
-                            })}
-                        </select>
+                    <PacmanSpinner
+                        pause={pauseLoadSpin}
+                        spinColor={selectedColor}
+                        spinSpeed={selectedSpeed}
+                    />
+                    <label>Color: </label>
+                    <select
+                        className='color-select'
+                        onChange={e => setSelectedColor(e.target.value)}
+                    >
+                        {['#ffe583', '#cdffb2', '#aec8ff'].map(x => {
+                            return <option key={x} style={{backgroundColor: x}} value={x}> </option>;
+                        })}
+                    </select>
+                    <label className='left20'>Speed: </label>
+                    <select
+                        value={selectedSpeed}
+                        className='speed-select'
+                        onChange={e => setSelectedSpeed(e.target.value.toLowerCase())}
+                    >
+                        {['normal', 'fast', 'slow'].map(x => {
+                            return (
+                                <option key={x} style={{backgroundColor: x}} value={x}>
+                                    {x[0].toUpperCase() + x.substring(1)}
+                                </option>
+                            )
+                        })}
+                    </select>
                 </div>
             </div>
             <div className='inline'>
@@ -120,6 +119,31 @@ const MediaStylesDemo = (props) => {
             </div>
             <div className='spin-jsx'>
                 {spinCode}
+            </div>
+            <div className='media-right-2'>
+                <RotatingSvg angularLimit={360} thetaDelta={0.5} pause={pauseLoadSpin}/>
+                <pre className='rotate-code'>
+                    class RotatingSvg extends Component {'{\n'}
+                    {'    '}state = {'{ currentTheta: 0 };\n\n'}
+                    {'    '}componentDidMount() {'{\n'}
+                    {'        '}const animate = () => {'{\n'}
+                    {'            '}const nextTheta = this.state.currentTheta > this.props.angularLimit ? 0{'\n'}
+                    {'                '}: this.state.currentTheta + this.props.thetaDelta;{'{\n'}
+                    {'            '}this.setState{'{ currentTheta: nextTheta });\n'}
+                    {'            '}requestAnimationFrame(animate){'\n'}
+                    {'        }\n'}
+                    {'        '}requestAnimationFrame(animate){'\n'}
+                    {'    }\n\n'}
+                    {'    '}render() {'{\n'}
+                    {'        '}return ( {'\n'}
+                    {'            '}&lt;svg width="100px" height="100px" viewBox="0 0 100 100"&gt;{'\n'}
+                    {'                '}&lt;g transform="translate(50, 50)"&gt;{'\n'}
+                    {'                    '}&lt;rect id="rect1" cx="25" width="4" height="14" x="14" y="14" fill="#E1EAAF"{'\n'}
+                    {'                          transform={`rotate(${this.state.currentTheta})`}/'}&gt;{'\n'}
+                    {'                    {/* ... */}\n'}
+                    {'                '}&lt;/g&gt;{'\n'}
+                    {'            '}&lt;/svg&gt;{'\n        )\n    }\n}\n'}
+                </pre>
             </div>
         </React.Fragment>
     )

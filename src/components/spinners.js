@@ -3,6 +3,7 @@ import React from "react";
 export const PacmanSpinner = (props) => {
     const {
         spinColor = '#cdffb2',
+        spinSpeed = 'normal',
         pause = false,
     } = props;
 
@@ -15,7 +16,7 @@ export const PacmanSpinner = (props) => {
               fill: #555;
             }
             .spinner .line {
-              animation: PacMan 5s infinite;
+              animation: PacMan ${spinSpeed === 'fast' ? '2.5s' : spinSpeed === 'slow' ? '10s' : '5s'} infinite;
               fill: none;
               stroke: ${spinColor};
               stroke-width: 25;
@@ -44,7 +45,7 @@ export const PacmanSpinner = (props) => {
             }
             `}
                 </style>
-            ) : (<style></style>)}
+            ) : null}
             <svg className="spinner" width="100" height="100" viewBox="0 0 100 100">
                 <circle className="background" r="24" cx="50" cy="50" />
                 <path

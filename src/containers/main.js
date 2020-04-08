@@ -20,8 +20,7 @@ class MainContainer extends Component {
 
     render() {
         let content;
-        // switch (this.props.selectedItem) {
-        switch ('media') {
+        switch (this.props.selectedItem) {
             case 'profile':
                 content = <UserSettings />;
                 break;

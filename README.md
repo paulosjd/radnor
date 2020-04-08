@@ -1,7 +1,7 @@
 
 A React app which provides examples of the following features: 
 PropTypes, defaultProps, Context API, HOCs, component composition and the children prop.
-No third-party packages are used besides React and `prop-types`.
+No third-party packages are used besides React and `prop-types` and `react-css-transition`.
 
 A component which wraps the main `<App/>` component in `<AppProvider`>
 to inject context is defined within `./src/store/provider.js`. It contains

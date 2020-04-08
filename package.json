@@ -5,9 +5,9 @@
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-css-transition": "^0.7.4",
     "react-dom": "^16.8.6",
-    "react-scripts": "1.0.12",
-    "react-transition-group": "^4.3.0"
+    "react-scripts": "1.0.12"
   },
   "scripts": {
     "start": "react-scripts start",
