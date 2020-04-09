@@ -3,7 +3,7 @@ import {LoadingSpinner, LoadingBar, PacmanSpinner} from '../components/spinners'
 import ButtonOne from '../components/button_one'
 import RotatingSvg from '../components/rotating_svg'
 
-const MediaStylesDemo = (props) => {
+const MediaStylesDemo = () => {
 
     const [pauseLoadSpin, setPauseLoadSpin] = useState(false);
     const [showCssCode, setShowCssCode] = useState(false);
